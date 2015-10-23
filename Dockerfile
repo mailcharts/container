@@ -41,4 +41,6 @@ RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -- \
 COPY ./requirements.txt /install/requirements.txt
 RUN pip install -r /install/requirements.txt
 RUN pip install "ipython[notebook]"
-RUN pip install nltk git+https://github.com/shivam5992/textstat.git
+RUN pip install nltk \
+                git+https://github.com/shivam5992/textstat.git \
+                ftfy unidecode
